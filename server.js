@@ -6,8 +6,11 @@ const app = express();
 const exphbs = require("express-handlebars");
 ///Heroku || Localhost
 let PORT = process.env.PORT || 3000;
-app.listen(PORT, function () {
-    console.log("Listening on port " + PORT);
+app.get("/", function (req, res) {
+    res.json(path.join(__dirname, "views/layouts/main.handlebars"));
+    app.listen(PORT, function () {
+        console.log("Listening on port " + PORT);
+    });
 });
 ///Mongoose
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
