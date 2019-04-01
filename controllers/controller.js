@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.router();
 const path = require("path");
 const request = require("request");
-const cherrio = require("cheerio");
+const cheerio = require("cheerio");
 const Comment = require("../models/Article.js");
 
 router.get("/", function (req, res) {
