@@ -25,7 +25,7 @@ db.once("open", function () {
     console.log("Connected to Mongoose!");
 });
 //Path
-var routes = require("./controllers/controller.js");
+var routes = require("./controller/controller.js");
 app.use("/", routes);
 ///Heroku || Localhost
 var port = process.env.PORT || 3000;
